@@ -21,32 +21,32 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 //        BottomNavigationItemView bottomNavigationView = findViewById(R.id.bottom_navigation);
-
+//
+//
 //        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
 //            @Override
 //            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 //                Fragment fragment;
 //                switch (item.getItemId()) {
-//                    case R.id.action_home:
-////                        Toast.makeText(MainActivity.this, "Home!!!", Toast.LENGTH_SHORT).show();
-//                        fragment = new PostsFragment();
+//                    case R.id.nav_meal:
+//                        fragment = new MealFragment();
 //                        break;
-//                    case R.id.action_compose:
-////                        Toast.makeText(MainActivity.this, "Compose!!!", Toast.LENGTH_SHORT).show();
-//                        fragment = new ComposeFragment();
+//                    case R.id.nav_feed:
+//                        fragment = new FeedFragment();
 //                        break;
-//                    case R.id.action_profile:
+//                    case R.id.nav_user:
+//                        fragment = new UserFragment();
+//                        break;
 //                    default:
-////                        Toast.makeText(MainActivity.this, "Profile!!!", Toast.LENGTH_SHORT).show();
-//                        fragment = new ProfileFragment();
+//                        fragment = new HomeFragment();
 //                        break;
 //                }
-//                fragmentManager.beginTransaction().replace(R.id.flContainer, fragment).commit();
+//                fragmentManager.beginTransaction().replace(R.id.fragment_container, fragment).commit();
 //                return true;
 //            }
 //        });
 //        // Set default selection
-//        bottomNavigationView.setSelectedItemId(R.id.action_home);
+//        bottomNavigationView.setSelectedItemId(R.id.nav_home);
 
 
     }
