@@ -101,6 +101,7 @@ public class RegisterFragment extends Fragment {
             user.setPassword(etPassword.getText().toString());
 
 
+
             user.signUpInBackground(e -> {
                 if (e != null) {
                     Log.e(TAG, "Error signing up");
