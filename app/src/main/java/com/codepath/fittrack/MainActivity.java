@@ -3,18 +3,21 @@ package com.codepath.fittrack;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.Toast;
 
-import com.google.android.material.bottomnavigation.BottomNavigationItemView;
+import com.codepath.fittrack.fragments.TestFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 
 public class MainActivity extends AppCompatActivity {
 
     public static final String TAG = "MainActivity";
+
+    final FragmentManager fragmentManager = getSupportFragmentManager();
     private BottomNavigationView bottomNavigationView;
 
     @Override
@@ -30,25 +33,24 @@ public class MainActivity extends AppCompatActivity {
                 Fragment fragment;
                 switch (item.getItemId()) {
                     case R.id.nav_home:
-                        fragment = new HomeFragment();
+                        fragment = new TestFragment();
                         Toast.makeText(MainActivity.this, "Home", Toast.LENGTH_SHORT).show();
                         break;
                     case R.id.nav_meal:
-                        fragment = new MealFragment();
+                        fragment = new TestFragment();
                         Toast.makeText(MainActivity.this, "Meal", Toast.LENGTH_SHORT).show();
                         break;
                     case R.id.nav_feed:
-                        fragment = new FeedFragment();
+                        fragment = new TestFragment();
                         Toast.makeText(MainActivity.this, "Feed", Toast.LENGTH_SHORT).show();
                         break;
                     case R.id.nav_user:
-                        fragment = new UserFragment();
+                    default:
+                        fragment = new TestFragment();
                         Toast.makeText(MainActivity.this, "User", Toast.LENGTH_SHORT).show();
                         break;
-                    default:
-                        break;
                 }
-
+                fragmentManager.beginTransaction().replace(R.id.flContainer, fragment).commit();
                 return true;
             }
         });

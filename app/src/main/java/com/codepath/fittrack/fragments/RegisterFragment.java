@@ -1,4 +1,4 @@
-package com.codepath.fittrack;
+package com.codepath.fittrack.fragments;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,6 +13,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.codepath.fittrack.LoginActivity;
+import com.codepath.fittrack.R;
 import com.parse.ParseUser;
 
 /**

@@ -17,12 +17,14 @@
         app:menu="@menu/button_navigation" />
 
     <FrameLayout
-        android:id="@+id/fragment_container"
+        android:id="@+id/flContainer"
         android:layout_width="0dp"
         android:layout_height="673dp"
+        app:layout_constraintBottom_toTopOf="@id/bottom_navigation"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        tools:layout_editor_absoluteY="1dp">
+
     </FrameLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
