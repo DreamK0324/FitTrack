@@ -37,20 +37,20 @@ public class MainActivity extends AppCompatActivity {
                 switch (item.getItemId()) {
                     case R.id.nav_home:
                         fragment = new HomeFragment();
-                        Toast.makeText(MainActivity.this, "Home", Toast.LENGTH_SHORT).show();
+//                        Toast.makeText(MainActivity.this, "Home", Toast.LENGTH_SHORT).show();
                         break;
                     case R.id.nav_meal:
                         fragment = new MealFragment();
-                        Toast.makeText(MainActivity.this, "Meal", Toast.LENGTH_SHORT).show();
+//                        Toast.makeText(MainActivity.this, "Meal", Toast.LENGTH_SHORT).show();
                         break;
                     case R.id.nav_feed:
                         fragment = new FeedFragment();
-                        Toast.makeText(MainActivity.this, "Feed", Toast.LENGTH_SHORT).show();
+//                        Toast.makeText(MainActivity.this, "Feed", Toast.LENGTH_SHORT).show();
                         break;
                     case R.id.nav_user:
                     default:
                         fragment = new UserFragment();
-                        Toast.makeText(MainActivity.this, "User", Toast.LENGTH_SHORT).show();
+//                        Toast.makeText(MainActivity.this, "User", Toast.LENGTH_SHORT).show();
                         break;
                 }
                 fragmentManager.beginTransaction().replace(R.id.flContainer, fragment).commit();
