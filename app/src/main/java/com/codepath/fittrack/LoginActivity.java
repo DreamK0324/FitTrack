@@ -14,6 +14,7 @@ import android.widget.TableLayout;
 
 import com.google.android.material.tabs.TabItem;
 import com.google.android.material.tabs.TabLayout;
+import com.parse.ParseUser;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -26,6 +27,11 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        if (ParseUser.getCurrentUser() != null){
+            goMainActivity();
+        }
+
         setContentView(R.layout.activity_login);
 
         tabLayout = findViewById(R.id.tlLogin);
@@ -63,5 +69,12 @@ public class LoginActivity extends AppCompatActivity {
         });
 
 
+    }
+
+    private void goMainActivity() {
+        Intent i = new Intent(this, MainActivity.class);
+        startActivity(i);
+
+        finish();
     }
 }
